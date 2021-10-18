@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Dental Care",
+    "img": "https://i.ibb.co/QXHqh55/dental1.png",
+    "disc": "Dental care · Oral hygiene, the practice of keeping the mouth and teeth clean in order to prevent dental disorders · Dentistry, the professional care of teeth."
+  },
+  {
+    "id": 2,
+    "title": "Dental Whitening",
+    "img": "https://i.ibb.co/bRtf98g/dental2.png",
+    "disc": "Tooth whitening or tooth bleaching is the process of lightening the color of human teeth. Whitening is often desirable when teeth become yellowed over time.."
+  },
+  {
+    "id": 3,
+    "title": "Tooth whitening",
+    "img": "https://i.ibb.co/GWVshsb/dental3.png",
+    "disc": "Whitening, Whitener or Whiten may refer to: Contents. 1 Processes or techniques; 2 People ... Tooth whitening, in dentistry; Whitening (leather processing)"
+  },
+  {
+    "id": 4,
+    "title": "Oral Hygiene",
+    "img": "https://i.ibb.co/dkWsTv8/dental4.png",
+    "disc": "Oral hygiene is the practice of keeping one's mouth clean and free of disease and other problems (e.g. bad breath) by regular brushing of the teeth (dental ."
+  },
+  {
+    "id": 5,
+    "title": "Heart Surgery",
+    "img": "https://i.ibb.co/dkWsTv8/dental4.png",
+    "disc": "Heart surgery can correct problems with the heart if other treatments haven't worked or can't be used. The most common type of heart surgery for adults is coronary artery bypass grafting (CABG). During CABG, a healthy artery or vein from the body is connected, or grafted, to a blocked coronary (heart) artery"
+  },
+  {
+    "id": 6,
+    "title": "Eye Solution",
+    "img": "https://i.ibb.co/C9kPSSZ/dental5.png",
+    "disc": "Eye drops or eyedrops are saline-containing drops used as an ocular route to administer. Depending on the condition being treated, they may contain steroids"
+  }
+]

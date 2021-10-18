@@ -13,7 +13,6 @@ import Profile from "./components/Pages/Profile/Profile";
 import ProfileEdit from "./components/Pages/Profile/ProfileEdit/ProfileEdit";
 import Footer from "./components/Shared/Footer/Footer";
 import Contact from "./components/Pages/Contact/Contact";
-import Pricing from "./components/Pages/Pricing/Pricing";
 
 function App() {
   return (
@@ -38,9 +37,6 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact></Contact>
-          </Route>
-          <Route path="/pricing">
-            <Pricing></Pricing>
           </Route>
           <PrivateRoute exact path="/services">
             <Services></Services>

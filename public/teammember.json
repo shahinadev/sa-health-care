@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Homira Khatun",
+    "img": "https://i.ibb.co/6BgVGXF/team-1.png",
+    "deg": "Cancer spacial"
+  },
+  {
+    "id": 2,
+    "name": "Kumar Shah",
+    "img": "https://i.ibb.co/XJNbHFW/team-2.png",
+    "deg": "Cancer spacial"
+  },
+  {
+    "id": 3,
+    "name": "Aklima Kathun",
+    "img": "https://i.ibb.co/NjSSqNB/team-3.png",
+    "deg": "Cancer spacial"
+  },
+  {
+    "id": 4,
+    "name": "Abdur Razzak",
+    "img": "https://i.ibb.co/gWy4bW7/team-4.png",
+    "deg": "Cancer spacial"
+  }
+]

@@ -1,0 +1,18 @@
+.our_team_two_section .team_item {
+  position: relative;
+  margin: 45px auto;
+  max-width: 270px;
+}
+
+.our_team_two_section .team_item .images img {
+  max-width: 100%;
+  transition: all 500ms linear 0s;
+  z-index: 1;
+}
+
+.our_team_two_section .team_item .content a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #162f62;
+}

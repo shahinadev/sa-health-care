@@ -1,0 +1,122 @@
+.banner_section_tow {
+  background: #f1f9f4;
+  padding-top: 115px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.banner_section_tow:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/vzJc7BC/angle1.png") no-repeat left top,
+    url("https://i.ibb.co/bQ1vFfy/angle2.png") no-repeat right top;
+  z-index: -1;
+}
+
+.banner_section_tow .banner_content {
+  margin-top: 90px;
+  position: relative;
+  z-index: 2;
+}
+.banner_section_tow .banner_content h2 {
+  font-weight: 800;
+  font-size: 60px;
+  color: #162f62;
+  line-height: 80px;
+}
+.banner_section_tow .banner_content p {
+  padding-bottom: 43px;
+  color: rgb(124, 123, 123);
+}
+.banner_section_tow .banner_content .theme_btn {
+  border-radius: 5px;
+}
+.banner_section_tow .banner_content a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+a {
+  outline: none;
+  transition: all 300ms linear 0s;
+}
+.custom_btn1,
+.custom_btn2 {
+  width: 170px;
+  height: 60px;
+  background: #f35b5b;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60px;
+}
+a.custom_btn1,
+a.custom_btn2 {
+  color: #fff;
+}
+.custom_btn2 {
+  background: #ffae2b;
+}
+a.custom_btn2:hover {
+  background-color: transparent;
+  color: #333;
+  outline: 2px solid orange;
+}
+a.custom_btn1:hover {
+  background-color: transparent;
+  color: #333;
+  outline: 2px solid rgb(125, 58, 250);
+}
+.banner_section_tow .banner_content a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.banner_section_tow .banner_content h2 span {
+  color: #7dd6f6;
+}
+.banner_section_tow .banner_content h2 span.red {
+  color: #fc7575;
+}
+
+.banner_section_tow .banner_images {
+  margin-left: auto;
+  position: relative;
+  max-width: 537px;
+  z-index: 1;
+}
+
+.banner_section_tow .banner_images:before {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  right: 130px;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/dttVC6X/angle3.png") no-repeat bottom left;
+  z-index: -1;
+}
+.banner_section_tow .banner_images img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+.banner_section_tow .banner_images:after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 50px;
+  border-style: solid;
+  border-width: 0 0 474px 548px;
+  border-color: transparent transparent #fc7575 transparent;
+  z-index: -1;
+}

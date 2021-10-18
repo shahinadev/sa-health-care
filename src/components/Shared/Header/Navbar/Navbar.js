@@ -33,34 +33,36 @@ const Navbar = () => {
           >
             <ul className="navbar-nav mx-5 mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink
+                <HashLink
                   activeClassName="nav-active"
                   className="nav-link active"
                   aria-current="page"
-                  exact
-                  to="/"
+                  smooth
+                  to="/#home"
                 >
                   Home
-                </NavLink>
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to={"/home#services"}>
+                  Services
+                </HashLink>
               </li>
               <li className="nav-item">
                 <HashLink
                   activeClassName="nav-active"
                   className="nav-link"
                   smooth
-                  to={"/home#services"}
-                >
-                  Services
-                </HashLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  activeClassName="nav-active"
-                  className="nav-link"
-                  to="/about"
+                  to="/home#about"
                 >
                   About us
-                </NavLink>
+                </HashLink>
+              </li>
+
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to={"/home#team"}>
+                  Our Team
+                </HashLink>
               </li>
               <li className="nav-item">
                 <NavLink
@@ -70,16 +72,6 @@ const Navbar = () => {
                 >
                   Contact
                 </NavLink>
-              </li>
-              <li className="nav-item">
-                <HashLink
-                  activeClassName="nav-active"
-                  className="nav-link"
-                  smooth
-                  to={"/home#pricing"}
-                >
-                  Pricing
-                </HashLink>
               </li>
               <li className="nav-item">
                 <NavLink
@@ -122,10 +114,10 @@ const Navbar = () => {
                   </li>
                   <li className="nav-item">
                     <button
-                      className="nav-link btn btn-danger text-light p-2"
+                      className="nav-link my-md-0 my-3 btn btn-danger text-light p-2"
                       onClick={logOut}
                     >
-                      <i class="fa fa-sign-out m-0 px-1" aria-hidden="true"></i>
+                      <i class="fas fa-sign-out-alt text-light"></i>
                     </button>
                   </li>
                 </>
@@ -134,10 +126,10 @@ const Navbar = () => {
                   <li className="nav-item">
                     <NavLink
                       activeClassName="nav-active"
-                      className="nav-link"
+                      className="nav-link my-md-0 my-3 btn btn-danger text-light"
                       to="/login"
                     >
-                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                      <i class="fas fa-sign-in-alt text-light mx-2 align-items-center"></i>
                       Login
                     </NavLink>
                   </li>

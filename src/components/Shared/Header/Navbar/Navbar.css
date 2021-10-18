@@ -8,7 +8,7 @@
   border-radius: 10px;
 }
 .nav-link {
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 18px;
   line-height: 100%;
   color: rgb(0, 0, 0) !important;
@@ -29,4 +29,7 @@
   outline: none;
   color: #fff;
   background-color: #fff;
+}
+.text-light {
+  color: #fff !important;
 }
