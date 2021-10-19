@@ -1,7 +1,9 @@
 import React from "react";
+import "./Appointment.css";
 import Banner from "./../../Shared/Banner/Banner";
-
-const Contact = () => {
+import useAuth from "./../../../hooks/useAuth";
+const Appointment = () => {
+  const { user } = useAuth();
   return (
     <>
       <Banner></Banner>
@@ -9,7 +11,7 @@ const Contact = () => {
         <div className="container">
           <div className="we_are_content">
             <div className="online_booking">
-              <h2>Contact With us</h2>
+              <h2>Make an appointment</h2>
               <form className="booking_form">
                 <div className="row">
                   <div className="col-lg-6 col-sm-12 form-group">
@@ -17,6 +19,7 @@ const Contact = () => {
                       type="text"
                       className="form-control"
                       placeholder="Your Name"
+                      value={user.displayName}
                     />
                   </div>
                   <div className="col-lg-6 col-sm-12 form-group">
@@ -24,6 +27,7 @@ const Contact = () => {
                       type="email"
                       className="form-control"
                       placeholder="Your Email"
+                      value={user.email}
                     />
                   </div>
                   <div className="col-lg-6 col-sm-12 form-group">
@@ -50,7 +54,7 @@ const Contact = () => {
                   </div>
                   <div className="col-lg-12 col-sm-12 form-group custom_button">
                     <button type="submit" className="custom_btn2">
-                      Send Message
+                      Booking Now
                     </button>
                   </div>
                 </div>
@@ -63,4 +67,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Appointment;

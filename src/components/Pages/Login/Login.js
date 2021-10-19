@@ -3,7 +3,7 @@ import { useHistory, useLocation } from "react-router";
 import useAuth from "./../../../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+console.log(process.env.REACT_APP_NAME);
 const Login = () => {
   const { signInWithGoogle, signInWithEmailPassword, error, message } =
     useAuth();

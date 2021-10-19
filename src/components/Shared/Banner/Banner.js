@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Banner.css";
+import { HashLink } from "react-router-hash-link";
 const Banner = () => {
   return (
     <section className="banner_section_tow">
@@ -17,12 +18,12 @@ const Banner = () => {
                 as other aspects of the craniofacial complex including the
                 temporomandibular joint and other.
               </p>
-              <Link to="/teams" className="custom_btn1">
+              <HashLink smooth to="/home#team" className="custom_btn1">
                 Expoert Team
-              </Link>
-              <Link to="/services" className="custom_btn2">
+              </HashLink>
+              <HashLink smooth to="/home#services" className="custom_btn2">
                 Our Services
-              </Link>
+              </HashLink>
             </div>
           </div>
           <div className="col-lg-6 my-md-0 my-5">

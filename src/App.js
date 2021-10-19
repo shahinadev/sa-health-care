@@ -3,9 +3,8 @@ import "./App.css";
 import NotFound from "./components/Pages/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
 import Register from "./components/Pages/Register/Register";
-import Service from "./components/Pages/Service/Service";
 import AuthProvider from "./context/AuthProvider";
-import About from "./components/Pages/About/About";
+import AboutPage from "./components/Pages/About/About.js";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Home from "./components/Pages/Home/Home";
 import Header from "./components/Shared/Header/Header";
@@ -13,7 +12,9 @@ import Profile from "./components/Pages/Profile/Profile";
 import ProfileEdit from "./components/Pages/Profile/ProfileEdit/ProfileEdit";
 import Footer from "./components/Shared/Footer/Footer";
 import Contact from "./components/Pages/Contact/Contact";
-import ResetPassword from "./components/Pages/Login/ResetPassword/ResetPassword";
+import Services from "./components/Pages/Home/Services/Services";
+import SingleService from "./components/Pages/Service/SingleService";
+import Appointment from "./components/Pages/Appointment/Appointment";
 function App() {
   return (
     <Router>
@@ -27,13 +28,10 @@ function App() {
             <Home></Home>
           </Route>
           <Route path="/about">
-            <About></About>
+            <AboutPage></AboutPage>
           </Route>
           <Route path="/login">
             <Login></Login>
-          </Route>
-          <Route path="/reset_password">
-            <ResetPassword></ResetPassword>
           </Route>
           <Route path="/register">
             <Register></Register>
@@ -41,11 +39,14 @@ function App() {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
-          <PrivateRoute exact path="/service">
-            <Service></Service>
+          <PrivateRoute exact path="/services">
+            <Services></Services>
+          </PrivateRoute>
+          <PrivateRoute exact path="/appointment">
+            <Appointment></Appointment>
           </PrivateRoute>
           <PrivateRoute path="/service/:id">
-            <Service></Service>
+            <SingleService></SingleService>
           </PrivateRoute>
           <PrivateRoute exact path="/profile">
             <Profile></Profile>

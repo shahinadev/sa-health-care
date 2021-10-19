@@ -4,7 +4,7 @@ import Member from "./Member";
 const OurTeam = () => {
   const [members, setMembers] = useState([]);
   useEffect(() => {
-    fetch("/teammember.json")
+    fetch("/teammembers.json")
       .then((res) => res.json())
       .then((data) => setMembers(data));
   }, []);
@@ -15,9 +15,17 @@ const OurTeam = () => {
           <h2>Specialist Doctors</h2>
         </div>
         <div className="row">
-          {members.map((member, index) => (
-            <Member member={member} key={index}></Member>
-          ))}
+          {!members.length > 0 ? (
+            <div class="d-flex justify-content-center my-20">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          ) : (
+            members.map((member, index) => (
+              <Member member={member} key={index}></Member>
+            ))
+          )}
         </div>
       </div>
     </section>

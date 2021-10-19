@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAAEpcCGC34r5855v6kjdPxHtEwTFtWAzc",
-  authDomain: "sa-health-carecenter.firebaseapp.com",
-  projectId: "sa-health-carecenter",
-  storageBucket: "sa-health-carecenter.appspot.com",
-  messagingSenderId: "457529811501",
-  appId: "1:457529811501:web:34ff0845f0e43e03348ea4",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 const FirebaseInit = () => initializeApp(firebaseConfig);

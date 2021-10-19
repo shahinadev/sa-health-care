@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Service from "./Service";
 import "./Services.css";
+import { Link } from "react-router-dom";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -17,14 +18,22 @@ const Services = () => {
           <div className="content">
             <h2>International Quality Services</h2>
           </div>
-          <a href="services-v2.html" className="custom_btn1">
+          <Link to="/services" className="custom_btn1">
             View all
-          </a>
+          </Link>
         </div>
         <div className="row">
-          {services.map((service, index) => (
-            <Service key={index} service={service}></Service>
-          ))}
+          {!services.length > 0 ? (
+            <div class="d-flex justify-content-center my-20">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          ) : (
+            services.map((service, index) => (
+              <Service key={index} service={service}></Service>
+            ))
+          )}
         </div>
       </div>
     </section>

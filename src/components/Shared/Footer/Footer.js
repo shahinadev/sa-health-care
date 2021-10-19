@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-3">
               <h3>About us</h3>
-              <hr />
+              <hr width="25%" />
               <p>
                 This is medical center website. Where you will get any help and
                 treatment about your body and health.
@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <div className="col-md-3 my-md-0 my-5">
               <h3>Quick Links</h3>
-              <hr />
+              <hr width="25%" />
               <div className="follow-us">
                 <Link className="d-block my-2 text-light" to="/about">
                   About
@@ -50,28 +50,28 @@ const Footer = () => {
             </div>
             <div className="col-md-3 my-md-0 my-5">
               <h3>Our Services</h3>
-              <hr />
+              <hr width="25%" />
               <div className="follow-us">
-                <Link className="d-block my-2 text-light" to="/services/1">
+                <Link className="d-block my-2 text-light" to="/service/1">
                   Dental Care
                 </Link>
-                <Link className="d-block my-2 text-light" to="/services/2">
+                <Link className="d-block my-2 text-light" to="/service/2">
                   Instand Medicine
                 </Link>
-                <Link className="d-block my-2 text-light" to="/services/3">
+                <Link className="d-block my-2 text-light" to="/service/3">
                   Kideyes Solution
                 </Link>
-                <Link className="d-block my-2 text-light" to="/services/4">
+                <Link className="d-block my-2 text-light" to="/service/4">
                   Eye Care
                 </Link>
-                <Link className="d-block my-2 text-light" to="/services/5">
+                <Link className="d-block my-2 text-light" to="/service/5">
                   Surery
                 </Link>
               </div>
             </div>
             <div className="col-md-3 my-md-0 my-5">
               <h3>Contact info</h3>
-              <hr />
+              <hr width="25%" />
               <div className="follow-us">
                 <p>
                   <i className="fas fa-map-marker-alt"></i> Chinora Naogaon 6530{" "}

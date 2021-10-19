@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./Service.css";
-const Service = () => {
+const SingleService = () => {
   const { id } = useParams();
   const [service, setService] = useState({});
   useEffect(() => {
@@ -13,7 +13,6 @@ const Service = () => {
       });
   }, []);
   const { title, img, disc } = service;
-  console.log(title);
   return (
     <section className="services_details_section my-5">
       <div className="container">
@@ -21,7 +20,7 @@ const Service = () => {
           <div className="col-lg-8">
             <div className="services_details">
               <div className="title_images">
-                <img src={img} alt="" />
+                <img src={img} className="w-100" alt="" />
               </div>
               <div className="title_content">
                 <h4>{title}</h4>
@@ -160,4 +159,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default SingleService;

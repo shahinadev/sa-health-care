@@ -11,7 +11,6 @@ import {
   signOut,
   updateProfile,
   sendEmailVerification,
-  sendPasswordResetEmail,
 } from "firebase/auth";
 FirebaseInit();
 
@@ -47,7 +46,9 @@ const useFirebase = () => {
       updateProfile(auth.currentUser, {
         displayName: username,
       })
-        .then((res) => {})
+        .then((res) => {
+          history.push(redirect_uri);
+        })
         .catch((err) => setError(err.message));
       //send email verification link
       sendEmailVerification(auth.currentUser)
@@ -59,15 +60,7 @@ const useFirebase = () => {
         });
     });
   };
-  const resetPassword = ({ email }) => {
-    sendPasswordResetEmail(auth, email)
-      .then((res) => {
-        setMessage(
-          "Reset Password Link is send to your email, please check and reset the password."
-        );
-      })
-      .catch((err) => setError(err.message));
-  };
+
   const signInWithEmailPassword = ({ email, password }) => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
@@ -118,7 +111,6 @@ const useFirebase = () => {
     isLoading,
     logOut,
     error,
-    resetPassword,
     message,
   };
 };
