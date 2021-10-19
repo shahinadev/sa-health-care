@@ -11,10 +11,11 @@ const Navbar = () => {
         <div className="container-fluid">
           <NavLink className="navbar-brand mx-5" exact to="/">
             <img
-              src="https://i.ibb.co/Hgs8Wmg/Logo.png"
-              className="img-fluid logo"
+              src="https://i.ibb.co/dG55z2X/dev-shahin1-gmail-com.jpg"
+              className="img-fluid w-25 rounded-circle logo"
               alt=""
             />
+            SA Health Care
           </NavLink>
           <button
             className="navbar-toggler"
@@ -98,11 +99,6 @@ const Navbar = () => {
                       </li>
                       <li>
                         <hr className="dropdown-divider" />
-                      </li>
-                      <li>
-                        <Link className="dropdown-item" to="/profile/edit">
-                          Edit profile
-                        </Link>
                       </li>
                     </ul>
                   </li>

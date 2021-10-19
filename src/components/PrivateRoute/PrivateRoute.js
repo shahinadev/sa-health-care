@@ -1,17 +1,11 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+import Loading from "../Loading/Loading";
 import useAuth from "./../../hooks/useAuth";
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { user, isLoading } = useAuth();
-  if (isLoading)
-    return (
-      <div class="d-flex justify-content-center my-20">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
+  if (isLoading) return <Loading></Loading>;
   return (
     <Route
       {...rest}

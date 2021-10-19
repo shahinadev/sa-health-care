@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./OurTeam.css";
 import Member from "./Member";
+import Loading from "../../../Loading/Loading";
 const OurTeam = () => {
   const [members, setMembers] = useState([]);
   useEffect(() => {
@@ -16,11 +17,7 @@ const OurTeam = () => {
         </div>
         <div className="row">
           {!members.length > 0 ? (
-            <div class="d-flex justify-content-center my-20">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-            </div>
+            <Loading></Loading>
           ) : (
             members.map((member, index) => (
               <Member member={member} key={index}></Member>

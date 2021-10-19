@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Service from "./Service";
 import "./Services.css";
 import { Link } from "react-router-dom";
+import Loading from "../../../Loading/Loading";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -24,11 +25,7 @@ const Services = () => {
         </div>
         <div className="row">
           {!services.length > 0 ? (
-            <div class="d-flex justify-content-center my-20">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-            </div>
+            <Loading></Loading>
           ) : (
             services.map((service, index) => (
               <Service key={index} service={service}></Service>
