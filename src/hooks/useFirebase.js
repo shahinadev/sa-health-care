@@ -38,6 +38,7 @@ const useFirebase = () => {
     setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
+
   //handle email and password auth
   const createAccountEmailAndPassword = ({ email, password, username }) => {
     setIsLoading(true);

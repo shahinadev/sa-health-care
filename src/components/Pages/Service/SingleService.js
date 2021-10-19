@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./Service.css";
 const SingleService = () => {
   const { id } = useParams();
   const [service, setService] = useState({});
+  const history = useHistory();
   useEffect(() => {
     fetch("/services.json")
       .then((res) => res.json())
       .then((data) => {
-        setService(data.find((serv) => serv.id === parseInt(id)));
+        if (data.find((serv) => serv.id === parseInt(id))) {
+          setService(data.find((serv) => serv.id === parseInt(id)));
+        } else {
+          history.push("/home#services");
+        }
       });
   }, []);
   const { title, img, disc } = service;
