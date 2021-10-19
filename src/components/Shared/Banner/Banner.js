@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Banner.css";
 import { HashLink } from "react-router-hash-link";
 const Banner = () => {
@@ -10,7 +9,7 @@ const Banner = () => {
           <div className="col-lg-6">
             <div className="banner_content">
               <h2>
-                Dental <span className="red">hospital</span> Company best in The{" "}
+                Dental <span className="red">hospital</span> Company best in The
                 <span>world</span>
               </h2>
               <p>

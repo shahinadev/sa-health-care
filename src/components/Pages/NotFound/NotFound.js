@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="my-5 text-center">
+    <div className="my-10 text-center">
       <img
         src="https://image.freepik.com/free-vector/error-404-concept-landing-page_52683-11371.jpg"
         alt="not found 404"

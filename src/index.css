@@ -12,6 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.my-10 {
+  margin: 150px auto;
+}
 .my-20 {
   margin: 350px auto;
 }

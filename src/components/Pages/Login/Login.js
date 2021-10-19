@@ -9,7 +9,7 @@ const Login = () => {
     useAuth();
   const history = useHistory();
   const location = useLocation();
-  const redirect_uri = location?.state?.form || "/";
+  const redirect_uri = location?.state?.from || "/";
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((res) => {

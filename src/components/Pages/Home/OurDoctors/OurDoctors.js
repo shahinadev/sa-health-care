@@ -10,7 +10,7 @@ const OurDoctors = () => {
       .then((data) => setMembers(data));
   }, []);
   return (
-    <section className="our_team_two_section" id="team">
+    <section className="our_team_two_section" id="doctors">
       <div className="container">
         <div className="team_header py-3">
           <h2>Specialist Doctors</h2>
