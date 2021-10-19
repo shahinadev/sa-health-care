@@ -1,8 +1,8 @@
 import React from "react";
 import Banner from "../../Shared/Banner/Banner";
 import About from "./About/About";
-import OurTeam from "./OurTeam/OurTeam";
 import Services from "./Services/Services";
+import OurDoctors from "./OurDoctors/OurDoctors";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       <About></About>
       <Services></Services>
-      <OurTeam></OurTeam>
+      <OurDoctors></OurDoctors>
     </>
   );
 };

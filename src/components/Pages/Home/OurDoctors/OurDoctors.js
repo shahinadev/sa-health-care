@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./OurTeam.css";
-import Member from "./Member";
+import "./OurDoctors.css";
+import Doctor from "./Doctor";
 import Loading from "../../../Loading/Loading";
-const OurTeam = () => {
+const OurDoctors = () => {
   const [members, setMembers] = useState([]);
   useEffect(() => {
     fetch("/teammembers.json")
@@ -20,7 +20,7 @@ const OurTeam = () => {
             <Loading></Loading>
           ) : (
             members.map((member, index) => (
-              <Member member={member} key={index}></Member>
+              <Doctor member={member} key={index}></Doctor>
             ))
           )}
         </div>
@@ -29,4 +29,4 @@ const OurTeam = () => {
   );
 };
 
-export default OurTeam;
+export default OurDoctors;

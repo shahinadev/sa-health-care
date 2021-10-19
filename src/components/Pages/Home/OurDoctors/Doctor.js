@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Member = ({ member }) => {
+const Doctor = ({ member }) => {
   const { name, deg, img } = member;
   return (
     <div className="col-xl-3 col-lg-4 col-md-6">
@@ -18,4 +18,4 @@ const Member = ({ member }) => {
   );
 };
 
-export default Member;
+export default Doctor;

@@ -55,8 +55,8 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <HashLink className="nav-link" smooth to={"/home#team"}>
-                  Our Team
+                <HashLink className="nav-link" smooth to={"/home#doctors"}>
+                  Our Doctors
                 </HashLink>
               </li>
               <li className="nav-item">
@@ -74,7 +74,7 @@ const Navbar = () => {
                   className="nav-link"
                   to="/appointment"
                 >
-                  Make appointment
+                  Get Appointment
                 </NavLink>
               </li>
               {user?.email ? (

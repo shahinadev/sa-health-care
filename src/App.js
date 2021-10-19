@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
 import NotFound from "./components/Pages/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
 import Register from "./components/Pages/Register/Register";
@@ -9,7 +8,6 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Home from "./components/Pages/Home/Home";
 import Header from "./components/Shared/Header/Header";
 import Profile from "./components/Pages/Profile/Profile";
-import ProfileEdit from "./components/Pages/Profile/ProfileEdit/ProfileEdit";
 import Footer from "./components/Shared/Footer/Footer";
 import Contact from "./components/Pages/Contact/Contact";
 import Services from "./components/Pages/Home/Services/Services";
@@ -50,9 +48,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/profile">
             <Profile></Profile>
-          </PrivateRoute>
-          <PrivateRoute exact path="/profile/edit">
-            <ProfileEdit></ProfileEdit>
           </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
