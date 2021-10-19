@@ -62,10 +62,14 @@ or you can use your email account to do login.
 
 # 1. React JS
 
+useState,ContextAPI, Custom Hook, React Router Dom, Much more.
+
 # 2. Firebase For Authentication
 
 # 3. Bootstrap and Custom css for Design
 
 # 4. FontAwesome for icon
+
+# 5. React Hook Form
 
 # Much more...
