@@ -27,25 +27,28 @@ const Register = () => {
   };
   return (
     <div className="container my-5">
-      <div class="signup-form">
+      <div className="signup-form">
         <h2>Create an Account</h2>
-        <p class="hint-text">
+        <p className="hint-text">
           Sign up with your social media account or email address
         </p>
-        <div class="social-btn text-center">
-          <button onClick={handleGoogleSignIn} class="btn btn-danger btn-lg">
-            <i class="fab fa-google"></i> Google
+        <div className="social-btn text-center">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-danger btn-lg"
+          >
+            <i className="fab fa-google"></i> Google
           </button>
         </div>
-        <div class="or-seperator">
+        <div className="or-seperator">
           <b>or</b>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           {error ? error : message}
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="text"
-              class="form-control input-lg"
+              className="form-control input-lg"
               {...register("username", {
                 required: true,
                 minLength: { value: 3, message: "username at lest 3 letter" },
@@ -64,10 +67,10 @@ const Register = () => {
               </span>
             )}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="email"
-              class="form-control input-lg"
+              className="form-control input-lg"
               {...register("email", {
                 required: true,
                 pattern: {
@@ -85,10 +88,10 @@ const Register = () => {
               </span>
             )}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="password"
-              class="form-control input-lg"
+              className="form-control input-lg"
               {...register("password", {
                 required: true,
                 minLength: {
@@ -111,16 +114,16 @@ const Register = () => {
               </span>
             )}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <button
               type="submit"
-              class="btn btn-success btn-lg btn-block signup-btn"
+              className="btn btn-success btn-lg btn-block signup-btn"
             >
               SignUp
             </button>
           </div>
         </form>
-        <div class="text-center">
+        <div className="text-center">
           Already have an account? <Link to="/login">Login here</Link>
         </div>
       </div>

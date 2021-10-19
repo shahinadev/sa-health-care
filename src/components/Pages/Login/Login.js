@@ -35,17 +35,20 @@ const Login = () => {
   };
   return (
     <div className="container my-5">
-      <div class="signup-form">
+      <div className="signup-form">
         <h2>Welcome Back Login </h2>
-        <p class="hint-text">
+        <p className="hint-text">
           Login up with your social media account or email address
         </p>
-        <div class="social-btn text-center">
-          <button onClick={handleGoogleSignIn} class="btn btn-danger btn-lg">
-            <i class="fab fa-google"></i> Google
+        <div className="social-btn text-center">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-danger btn-lg"
+          >
+            <i className="fab fa-google"></i> Google
           </button>
         </div>
-        <div class="or-seperator">
+        <div className="or-seperator">
           <b>or</b>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -62,10 +65,10 @@ const Login = () => {
             </span>
           )}
           <span>{message && message}</span>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="email"
-              class="form-control input-lg"
+              className="form-control input-lg"
               {...register("email", {
                 required: true,
                 pattern: {
@@ -83,10 +86,10 @@ const Login = () => {
               </span>
             )}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <input
               type="password"
-              class="form-control input-lg"
+              className="form-control input-lg"
               {...register("password", {
                 required: true,
                 minLength: {
@@ -104,16 +107,16 @@ const Login = () => {
               </span>
             )}
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <button
               type="submit"
-              class="btn btn-success btn-lg btn-block signup-btn"
+              className="btn btn-success btn-lg btn-block signup-btn"
             >
               Login
             </button>
           </div>
         </form>
-        <div class="text-center">
+        <div className="text-center">
           Need an account? <Link to="/register">Register here</Link>
         </div>
       </div>

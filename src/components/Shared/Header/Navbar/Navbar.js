@@ -34,7 +34,6 @@ const Navbar = () => {
             <ul className="navbar-nav mx-5 mb-2 mb-lg-0">
               <li className="nav-item">
                 <HashLink
-                  activeClassName="nav-active"
                   className="nav-link active"
                   aria-current="page"
                   smooth
@@ -49,12 +48,7 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink
-                  activeClassName="nav-active"
-                  className="nav-link"
-                  smooth
-                  to="/home#about"
-                >
+                <HashLink className="nav-link" smooth to="/home#about">
                   About us
                 </HashLink>
               </li>
@@ -117,7 +111,7 @@ const Navbar = () => {
                       className="nav-link my-md-0 my-3 btn btn-danger text-light p-2"
                       onClick={logOut}
                     >
-                      <i class="fas fa-sign-out-alt text-light"></i>
+                      <i className="fas fa-sign-out-alt text-light"></i>
                     </button>
                   </li>
                 </>
@@ -129,7 +123,7 @@ const Navbar = () => {
                       className="nav-link my-md-0 my-3 btn btn-danger text-light"
                       to="/login"
                     >
-                      <i class="fas fa-sign-in-alt text-light mx-2 align-items-center"></i>
+                      <i className="fas fa-sign-in-alt text-light mx-2 align-items-center"></i>
                       Login
                     </NavLink>
                   </li>
