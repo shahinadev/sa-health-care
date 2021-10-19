@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, signInWithEmailPassword, error, message } =
+    useAuth();
   const history = useHistory();
   const location = useLocation();
   const redirect_uri = location?.state?.form || "/";
@@ -22,7 +23,6 @@ const Login = () => {
   const regx = {
     email:
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    password: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
   };
 
   const {
@@ -31,7 +31,7 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    signInWithEmailPassword(data);
   };
   return (
     <div className="container my-5">
@@ -41,20 +41,27 @@ const Login = () => {
           Login up with your social media account or email address
         </p>
         <div class="social-btn text-center">
-          {/* <Link to="#" class="btn btn-primary btn-lg">
-            <i class="fa fa-facebook"></i> Facebook
-          </Link>
-          <Link to="#" class="btn btn-info btn-lg">
-            <i class="fa fa-twitter"></i> Twitter
-          </Link> */}
           <button onClick={handleGoogleSignIn} class="btn btn-danger btn-lg">
-            <i class="fa fa-google"></i> Google
+            <i class="fab fa-google"></i> Google
           </button>
         </div>
         <div class="or-seperator">
           <b>or</b>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
+          {error && (
+            <span className="text-danger d-block my-2">
+              {error.includes("wrong-password") ? (
+                <>
+                  "Password Not match" <span>did Forgot password?</span>
+                  <Link to="/reset_password">reset here.</Link>
+                </>
+              ) : (
+                error
+              )}
+            </span>
+          )}
+          <span>{message && message}</span>
           <div class="form-group">
             <input
               type="email"
@@ -85,11 +92,6 @@ const Login = () => {
                 minLength: {
                   value: 6,
                   message: "Password minimum length must be 6",
-                },
-                pattern: {
-                  value: regx.password,
-                  message:
-                    "Password must contain 1 Upper Latter, 1 Lower Latter 1 spacial character",
                 },
               })}
               placeholder="Password"

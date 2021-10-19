@@ -1,19 +1,15 @@
 import React from "react";
 import useAuth from "./../../../hooks/useAuth";
-import { useHistory } from "react-router";
-import { useLocation } from "react-router";
+
 import { Link } from "react-router-dom";
 import "./Register.css";
 import { useForm } from "react-hook-form";
 const Register = () => {
-  const { signInWithGoogle } = useAuth();
-  const history = useHistory();
-  const location = useLocation();
-  const redirect_uri = location?.state?.form || "/";
+  const { signInWithGoogle, createAccountEmailAndPassword, error, message } =
+    useAuth();
+
   const handleGoogleSignIn = () => {
-    signInWithGoogle().then((res) => {
-      history.push(redirect_uri);
-    });
+    signInWithGoogle().then((res) => {});
   };
   const regx = {
     email:
@@ -27,30 +23,25 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    createAccountEmailAndPassword(data);
   };
   return (
     <div className="container my-5">
       <div class="signup-form">
+        <h2>Create an Account</h2>
+        <p class="hint-text">
+          Sign up with your social media account or email address
+        </p>
+        <div class="social-btn text-center">
+          <button onClick={handleGoogleSignIn} class="btn btn-danger btn-lg">
+            <i class="fab fa-google"></i> Google
+          </button>
+        </div>
+        <div class="or-seperator">
+          <b>or</b>
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2>Create an Account</h2>
-          <p class="hint-text">
-            Sign up with your social media account or email address
-          </p>
-          <div class="social-btn text-center">
-            <Link to="#" class="btn btn-primary btn-lg">
-              <i class="fa fa-facebook"></i> Facebook
-            </Link>
-            <Link to="#" class="btn btn-info btn-lg">
-              <i class="fa fa-twitter"></i> Twitter
-            </Link>
-            <Link to="#" class="btn btn-danger btn-lg">
-              <i class="fa fa-google"></i> Google
-            </Link>
-          </div>
-          <div class="or-seperator">
-            <b>or</b>
-          </div>
+          {error ? error : message}
           <div class="form-group">
             <input
               type="text"
@@ -130,7 +121,7 @@ const Register = () => {
           </div>
         </form>
         <div class="text-center">
-          Need an account? <Link to="/register">Register here</Link>
+          Already have an account? <Link to="/login">Login here</Link>
         </div>
       </div>
     </div>

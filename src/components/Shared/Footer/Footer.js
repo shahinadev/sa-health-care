@@ -17,16 +17,16 @@ const Footer = () => {
               <div className="follow-us">
                 <p>Following us:</p>
                 <a target="_blank" href="https://www.fb.com/shahinadev">
-                  <i className="fa social-icon mr-5 fa-facebook"></i>{" "}
+                  <i className="fab social-icon mr-5 fa-facebook"></i>{" "}
                 </a>
                 <a target="_blank" href="https://www.fb.com/shahinadev">
-                  <i className="fa social-icon mr-5 d-inline fa-twitter"></i>
+                  <i className="fab social-icon mr-5 d-inline fa-twitter"></i>
                 </a>
                 <a target="_blank" href="https://www.fb.com/shahinadev">
-                  <i className="fa social-icon mr-5 d-inline fa-linkedin"></i>
+                  <i className="fab social-icon mr-5 d-inline fa-linkedin"></i>
                 </a>
                 <a target="_blank" href="https://www.fb.com/shahinadev">
-                  <i className="fa social-icon mr-5 d-inline fa-instagram"></i>
+                  <i className="fab social-icon mr-5 d-inline fa-instagram"></i>
                 </a>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               <hr />
               <div className="follow-us">
                 <p>
-                  <i className="fa fa-map-marker"></i> Chinora Naogaon 6530{" "}
+                  <i className="fas fa-map-marker-alt"></i> Chinora Naogaon 6530{" "}
                   <br />
                   Bangladesh
                 </p>

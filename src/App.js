@@ -3,7 +3,7 @@ import "./App.css";
 import NotFound from "./components/Pages/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
 import Register from "./components/Pages/Register/Register";
-import Services from "./components/Pages/Services/Services";
+import Service from "./components/Pages/Service/Service";
 import AuthProvider from "./context/AuthProvider";
 import About from "./components/Pages/About/About";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -13,7 +13,7 @@ import Profile from "./components/Pages/Profile/Profile";
 import ProfileEdit from "./components/Pages/Profile/ProfileEdit/ProfileEdit";
 import Footer from "./components/Shared/Footer/Footer";
 import Contact from "./components/Pages/Contact/Contact";
-
+import ResetPassword from "./components/Pages/Login/ResetPassword/ResetPassword";
 function App() {
   return (
     <Router>
@@ -32,14 +32,20 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/reset_password">
+            <ResetPassword></ResetPassword>
+          </Route>
           <Route path="/register">
             <Register></Register>
           </Route>
           <Route path="/contact">
             <Contact></Contact>
           </Route>
-          <PrivateRoute exact path="/services">
-            <Services></Services>
+          <PrivateRoute exact path="/service">
+            <Service></Service>
+          </PrivateRoute>
+          <PrivateRoute path="/service/:id">
+            <Service></Service>
           </PrivateRoute>
           <PrivateRoute exact path="/profile">
             <Profile></Profile>

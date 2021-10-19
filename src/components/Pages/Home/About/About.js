@@ -9,16 +9,16 @@ const About = () => {
         <hr width="15%" />
         <div className="row">
           <div className="col-lg-6">
-            <div className="about_video wow slideInLeft">
+            <div className="about_video">
               <img src="https://i.ibb.co/6m5L0j9/about-video.png" alt="" />
             </div>
           </div>
           <div className="col-lg-6">
             <div className="about_content">
-              <h2 className="wow fadeInUp">
+              <h2>
                 Know medical about <span>Medicit</span> hospital
               </h2>
-              <p className="wow fadeInUp">
+              <p>
                 A world-class quaternary care facility with multiple Centers of
                 Excellence. Nepal Mediciti combines the finest medical minds and
                 advanced technology to provide holistic treatment within a
@@ -29,7 +29,7 @@ const About = () => {
                 will foster research, education and a distinctive work culture
                 that will set high ethical and social standards
               </p>
-              <div className="media wow fadeInUp" data-wow-delay="1.2s">
+              <div className="media">
                 <img
                   src="https://i.ibb.co/1GXHBLc/01.png"
                   className="mr-3"

@@ -2,37 +2,43 @@
   {
     "id": 1,
     "title": "Dental Care",
-    "img": "https://i.ibb.co/QXHqh55/dental1.png",
+    "icon": "https://i.ibb.co/QXHqh55/dental1.png",
+    "img": "https://i.ibb.co/9nb7hpj/top-images.jpg",
     "disc": "Dental care · Oral hygiene, the practice of keeping the mouth and teeth clean in order to prevent dental disorders · Dentistry, the professional care of teeth."
   },
   {
     "id": 2,
     "title": "Dental Whitening",
-    "img": "https://i.ibb.co/bRtf98g/dental2.png",
+    "icon": "https://i.ibb.co/bRtf98g/dental2.png",
+    "img": "https://i.ibb.co/LgtkRpt/professional-teeth-whitening-lincoln-family-dentistry-ne-1024x683.png",
     "disc": "Tooth whitening or tooth bleaching is the process of lightening the color of human teeth. Whitening is often desirable when teeth become yellowed over time.."
   },
   {
     "id": 3,
     "title": "Tooth whitening",
-    "img": "https://i.ibb.co/GWVshsb/dental3.png",
-    "disc": "Whitening, Whitener or Whiten may refer to: Contents. 1 Processes or techniques; 2 People ... Tooth whitening, in dentistry; Whitening (leather processing)"
+    "icon": "https://i.ibb.co/GWVshsb/dental3.png",
+    "img": "https://i.ibb.co/S3k2qQm/teeth-whitening-420.jpg",
+    "disc": "Whitening, Whitener or Whiten may refer to: Contents. 1 Processes or techniques; 2 People ooth whitening, in dentistry; Whitening (leather processing),Hydrogen peroxide) is the active ingredient most commonly used in whitening products and is delivered as either hydrogen peroxide or carbamide peroxide.[1]Hydrogen peroxide is analogous to carbamide peroxide as it is released when the stable complex is in contact with water. "
   },
   {
     "id": 4,
     "title": "Oral Hygiene",
-    "img": "https://i.ibb.co/dkWsTv8/dental4.png",
-    "disc": "Oral hygiene is the practice of keeping one's mouth clean and free of disease and other problems (e.g. bad breath) by regular brushing of the teeth (dental ."
+    "icon": "https://i.ibb.co/dkWsTv8/dental4.png",
+    "img": "https://i.ibb.co/4mgs6gg/dental-hygiene.jpg",
+    "disc": "Oral hygiene is the practice of keeping one's mouth clean and free of disease and other problems (e.g. bad breath) by regular brushing of the teeth (dental. General guidelines for adults suggest brushing at least twice a day with a fluoridated toothpaste: brushing last thing at night and at least on one other occasion.[2] Cleaning between the teeth is called interdental cleaning and is as important as tooth brushing.[3] This is because a toothbrush cannot reach between the teeth and therefore only removes about 50% of plaque from the surface of the teeth.[4] There are many tools to clean between the teeth, including floss, tape and interdental brushes; it is up to each individual to choose which tool they prefer to use.."
   },
   {
     "id": 5,
     "title": "Heart Surgery",
-    "img": "https://i.ibb.co/dkWsTv8/dental4.png",
+    "icon": "https://i.ibb.co/dkWsTv8/dental4.png",
+    "img": "https://i.ibb.co/x32jPmQ/surgery-AFP2.webp",
     "disc": "Heart surgery can correct problems with the heart if other treatments haven't worked or can't be used. The most common type of heart surgery for adults is coronary artery bypass grafting (CABG). During CABG, a healthy artery or vein from the body is connected, or grafted, to a blocked coronary (heart) artery"
   },
   {
     "id": 6,
     "title": "Eye Solution",
-    "img": "https://i.ibb.co/C9kPSSZ/dental5.png",
-    "disc": "Eye drops or eyedrops are saline-containing drops used as an ocular route to administer. Depending on the condition being treated, they may contain steroids"
+    "icon": "https://i.ibb.co/C9kPSSZ/dental5.png",
+    "img": "https://i.ibb.co/VmqbfMn/Copy-of-Untitled-1.jpg",
+    "disc": "Eye drops or eyedrops are saline-containing drops used as an ocular route to administer. Depending on the condition being treated, they may contain steroids.Eyes drops sometimes do not have medications in them and are only lubricating and tear-replacing solutions. There is a wide variety of artificial tear eye drops that provide different surface healing strategies. One can find bicarbonate ions, hypotonicity, high viscosity gels and ointments, and non-preserved types. They all act differently and therefore, one may have to try different artificial tears to find the one that works the best."
   }
 ]

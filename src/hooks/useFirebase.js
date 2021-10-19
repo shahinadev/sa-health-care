@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FirebaseInit from "./../Firebase/Firebase";
+import { useHistory, useLocation } from "react-router";
 import {
   getAuth,
   signInWithPopup,
@@ -8,15 +9,25 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signOut,
+  updateProfile,
+  sendEmailVerification,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 FirebaseInit();
 
 const useFirebase = () => {
   //store auth user into user state
   const [user, setUser] = useState({});
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
-  //handle date fetched or not
+  //handle data fetched or not
   const [isLoading, setIsLoading] = useState(true);
+
+  //handle redirect
+  const history = useHistory();
+  const location = useLocation();
+  const redirect_uri = location?.state?.form || "/";
 
   //firebase auth
   const auth = getAuth();
@@ -28,16 +39,56 @@ const useFirebase = () => {
     setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
-
   //handle email and password auth
-  const createAccountEmailAndPassword = (email, password) => {
+  const createAccountEmailAndPassword = ({ email, password, username }) => {
     setIsLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
+    createUserWithEmailAndPassword(auth, email, password).then((res) => {
+      //update profile for set the username
+      updateProfile(auth.currentUser, {
+        displayName: username,
+      })
+        .then((res) => {})
+        .catch((err) => setError(err.message));
+      //send email verification link
+      sendEmailVerification(auth.currentUser)
+        .then((res) => {})
+        .catch((err) => setError(err.message))
+        .catch((err) => setError(err.message))
+        .finally(() => {
+          setIsLoading(false);
+        });
+    });
   };
-
-  const signInWithEmailPassword = (email, password) => {
+  const resetPassword = ({ email }) => {
+    sendPasswordResetEmail(auth, email)
+      .then((res) => {
+        setMessage(
+          "Reset Password Link is send to your email, please check and reset the password."
+        );
+      })
+      .catch((err) => setError(err.message));
+  };
+  const signInWithEmailPassword = ({ email, password }) => {
     setIsLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        setMessage("Sign In Successfully., redirect in 1 seconds");
+        setTimeout(() => {
+          history.push(redirect_uri);
+        }, 1000);
+      })
+      .catch((err) => {
+        if (err.message.includes("user-not-found")) {
+          setError("No user found with those info.");
+        } else if (err.message.includes("password-not-match")) {
+          setError("Password not match..");
+        } else {
+          setError(err.message);
+        }
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   //handle LogOut
@@ -50,8 +101,10 @@ const useFirebase = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        setError("");
       } else {
         setUser({});
+        setMessage("");
       }
       setIsLoading(false);
     });
@@ -64,6 +117,9 @@ const useFirebase = () => {
     user,
     isLoading,
     logOut,
+    error,
+    resetPassword,
+    message,
   };
 };
 
