@@ -42,24 +42,30 @@ const useFirebase = () => {
   //handle email and password auth
   const createAccountEmailAndPassword = ({ email, password, username }) => {
     setIsLoading(true);
-    createUserWithEmailAndPassword(auth, email, password).then((res) => {
-      //update profile for set the username
-      updateProfile(auth.currentUser, {
-        displayName: username,
-      })
-        .then((res) => {
-          history.push(redirect_uri);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        //update profile for set the username
+        updateProfile(auth.currentUser, {
+          displayName: username,
         })
-        .catch((err) => setError(err.message));
-      //send email verification link
-      sendEmailVerification(auth.currentUser)
-        .then((res) => {})
-        .catch((err) => setError(err.message))
-        .catch((err) => setError(err.message))
-        .finally(() => {
-          setIsLoading(false);
-        });
-    });
+          .then((res) => {
+            history.push(redirect_uri);
+          })
+          .catch((err) => setError(err.message));
+
+        //send email verification link
+        sendEmailVerification(auth.currentUser)
+          .then((res) => {
+            setMessage("Please verity your email address");
+          })
+          .catch((err) => setError(err.message));
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const signInWithEmailPassword = ({ email, password }) => {
