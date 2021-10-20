@@ -77,7 +77,7 @@ const Navbar = () => {
                   Get Appointment
                 </NavLink>
               </li>
-              {user?.email ? (
+              {user?.displayName ? (
                 <>
                   <li className="nav-item dropdown">
                     <button
